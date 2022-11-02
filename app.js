@@ -2,6 +2,7 @@ var createError = require("http-errors");
 var express = require("express");
 var cors = require("cors");
 var path = require("path");
+var cron = require("node-cron");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
@@ -51,6 +52,10 @@ app.use(function (err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render("error");
+});
+
+cron.schedule("*/2 * * * *", () => {
+  console.log("running a task every 2 minutes");
 });
 
 module.exports = app;
