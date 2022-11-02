@@ -11,6 +11,9 @@ var usersRouter = require("./routes/users");
 var teamsDBRouter = require("./routes/teams-db");
 var tasksRouter = require("./routes/tasks-json");
 
+var fs = require("fs");
+const DATA_PATH = "data/tasks.json";
+
 var app = express();
 
 // view engine setup
@@ -55,7 +58,21 @@ app.use(function (err, req, res, next) {
 });
 
 cron.schedule("*/2 * * * *", () => {
-  console.log("running a task every 2 minutes");
+  var tasks = getTasks();
+  tasks.forEach(task => {
+    task.completed = false;
+  });
+  setTasks(tasks);
 });
+
+function getTasks() {
+  const content = fs.readFileSync(DATA_PATH);
+  return JSON.parse(content);
+}
+
+function setTasks(tasks) {
+  const content = JSON.stringify(tasks, null, 2);
+  fs.writeFileSync(DATA_PATH, content);
+}
 
 module.exports = app;
