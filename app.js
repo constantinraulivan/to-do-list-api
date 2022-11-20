@@ -34,7 +34,7 @@ function processingSimulate(req, res, next) {
     next();
   }, wait);
 }
-app.use("/teams-json", processingSimulate, tasksRouter);
+app.use("/tasks-json", processingSimulate, tasksRouter);
 //app.use("/tasks-json", tasksRouter);
 
 // catch 404 and forward to error handler
