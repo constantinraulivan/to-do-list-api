@@ -1,12 +1,47 @@
 [
   {
-    "id": "ezabnf1630345987541",
-    "name": "Take out trash!!",
-    "completed": true
+    "id": "xrv621664213121591",
+    "name": "Vacuum bedroom",
+    "completed": false
   },
   {
-    "id": "rq227z1667237225226",
-    "name": "test",
+    "id": "d70x0l1666987510657",
+    "name": "Take out trash",
+    "completed": false
+  },
+  {
+    "id": "c7kgei1667236275262",
+    "name": "Do dishes",
+    "completed": false
+  },
+  {
+    "id": "fawli1667416515640",
+    "name": "Workout",
+    "completed": false
+  },
+  {
+    "id": "gxsrjn1667416599563",
+    "name": "Read 30 pages",
+    "completed": false
+  },
+  {
+    "id": "eaw5xk1667416614420",
+    "name": "Meditate for 20 minutes",
+    "completed": false
+  },
+  {
+    "id": "rboirn1667416770038",
+    "name": "Walk the dog",
+    "completed": false
+  },
+  {
+    "id": "s1xqk1667416783367",
+    "name": "Feed the goldfish",
+    "completed": false
+  },
+  {
+    "id": "xt0tvg1667416834834",
+    "name": "Do laundry",
     "completed": false
   }
 ]
