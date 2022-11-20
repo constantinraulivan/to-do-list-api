@@ -2,12 +2,12 @@ var createError = require("http-errors");
 var express = require("express");
 var cors = require("cors");
 var path = require("path");
+var cron = require("node-cron");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
-var teamsDBRouter = require("./routes/teams-db");
 var tasksRouter = require("./routes/tasks-json");
 
 var fs = require("fs");
@@ -28,7 +28,6 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
-app.use("/teams", teamsDBRouter);
 
 function processingSimulate(req, res, next) {
   const wait = 500 + Math.floor(Math.random() * 6) * 100; // min-500ms + max-500ms
