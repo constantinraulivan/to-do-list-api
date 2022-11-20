@@ -15,7 +15,6 @@ Node JS CRUD API Example
 - [Install](#install)
 - [Usage](#usage)
 - [JSON file as storage](#json-file-as-storage)
-- [DB (MySQL) as storage](#db-mysql-as-storage)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
